@@ -69,8 +69,8 @@ endif
 syn keyword pythonConstant	False None True
 syn keyword pythonStatement	as assert break continue del exec global
 syn keyword pythonStatement	lambda nonlocal pass print return with yield
-syn keyword pythonStatement	def nextgroup=pythonFunction skipwhite
-syn keyword pythonStatement class nextgroup=pythonClass skipwhite
+syn keyword pythonDefine	def nextgroup=pythonFunction skipwhite
+syn keyword pythonDefine        class nextgroup=pythonClass skipwhite
 syn keyword pythonConditional	elif else if
 syn keyword pythonRepeat	for while
 syn keyword pythonOperator	and in is not or
@@ -318,6 +318,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonParam Normal
   HiLink pythonBrackets Normal
   HiLink pythonClassParameters InheritUnderlined
+  HiLink pythonDefine            Statement
 
   if !exists("python_no_number_highlight")
     HiLink pythonNumber		Number
