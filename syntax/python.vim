@@ -109,6 +109,7 @@ syn region pythonVars start="(" end="):*\n" contained contains=pythonParameters 
 syn match pythonParameters "[^,:]*" contained contains=pythonParam,pythonBrackets skipwhite
 syn match pythonParam "=[^,]*" contained contains=pythonExtraOperator,pythonBuiltin,pythonConstant,pythonStatement,pythonNumber,pythonString skipwhite
 syn match pythonBrackets "[(|)]" contained skipwhite
+syn match pythonFuncCall /[a-zA-Z_$][a-zA-Z0-9_$]*\ze(/
 
 " NOTE: @pfdevilliers added this
 " The same as the previous definitions but for the python class.
